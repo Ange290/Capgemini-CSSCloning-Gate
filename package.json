@@ -1,0 +1,24 @@
+{
+  "name": "capgemini-csscloning-gate",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Ange290/Capgemini-CSSCloning-Gate#readme",
+  "bugs": {
+    "url": "https://github.com/Ange290/Capgemini-CSSCloning-Gate/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ange290/Capgemini-CSSCloning-Gate.git"
+  },
+  "license": "ISC",
+  "author": "Ange UWIZERA",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.16",
+    "tailwindcss": "^4.1.16"
+  }
+}
