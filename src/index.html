@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body>
+<nav> 
+    <div class="container mx-auto h-screen" style="background-image: url('../assets/images/3-e1740988693582.jpeg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+        <div class="flex justify-between items-center py-4 pl-6 md:pl-4 ">
+            <div class="text-white text-lg font-bold ">
+                <img src="../assets/images/capgeminiWhite.svg" alt="" class="sm:h-8 sm:w-auto h-6 w-auto">
+            </div>
+          
+            <ul class=" bg-gray-800 p-4 hidden md:flex md:flex-row flex-col gap-6 sm:gap-10 items-center" id="menu" aria-hidden="true">
+                <li><a href="#" class="text-white hover:text-gray-400">Insights</a></li>
+                <li><a href="#" class="text-white hover:text-gray-400">Industries</a></li>
+                <li><a href="#" class="text-white hover:text-gray-400">Services</a></li>
+                <li><a href="#" class="text-white hover:text-gray-400">Careers</a></li>
+                <li><a href="#" class="text-white hover:text-gray-400">News</a></li>
+                <li><a href="#" class="text-white hover:text-gray-400">About us</a></li>
+            </ul>
+        
+
+          <div class="md:hidden">
+      <button id="menu-btn" type="button" aria-controls="menu" aria-expanded="false" class="text-gray-800 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    </div>
+</nav>
+ <script src="humberger.js"></script>
+</body>
+</html>
