@@ -88,7 +88,7 @@
   </div> <!-- .container -->
 </nav>
 
-<div class="bg-gray-950 h-auto w-full  pb-7">
+<div class="bg-gray-950  w-full  pb-7">
   <h1 class="text-4xl text-white py-16 px-20">Highlights</h1>
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-20">
     <div class="flex flex-col items-center gap-4">
@@ -121,24 +121,54 @@
 <!-- Insights -->
  <div>
    <h1 class="text-4xl text-white pt-24 pb-12 px-20">Latest Insights</h1>
-  <div class="flex flex-col items-start justify-start gap-2 relative  pr-20">
-   <img src="./assets/images/Sustainability-trends-2025_Banner_2880X1800 (1).jpeg" alt="" class="h-[30vw] w-[80vw]">
+  <div class="flex flex-col items-start justify-start gap-2 relative pr-4 md:pr-20">
+    <div class="relative w-full">
+      <img src="./assets/images/Sustainability-trends-2025_Banner_2880X1800 (1).jpeg" alt="" class="w-full h-auto max-h-[60vh] object-cover rounded-md z-10">
+
+      <!-- Responsive card: stacks under image on small screens, positioned to the right on md+ -->
+      <div class="bg-gray-800 text-white p-5 mt-4 md:mt-0 flex flex-col items-start gap-2 w-full md:w-[35vw] md:absolute md:top-16 md:right-14 rounded-md z-20">
+        <div class="flex items-center gap-3">
+          <hr class="h-px w-12 bg-white border-none" />
+          <p class="text-lg sm:text-md">Capgemini Research Institute</p>
+        </div>
+        <p class="text-2xl font-medium">A world in balance 2025</p>
+        <p class="text-white mt-2 text-sm uppercase">CAPGEMINI RESEARCH INSTITUTE</p>
+      </div>
+    </div>
+  </div>
+      </div>
+      <div  class="flex flex-row justify-between items-center gap-6 pt-8">
+<div class="bg-blue-950 flex flex-col items-start justify-start gap-3 px-10 w-[30vw] h-[35vw] ml-14 pt-4 ">
+  <div class="flex flex-row gap-4 pt-8">
+ <hr class="h-px w-5 mt-4 bg-white border-none" />
+      <p class="text-lg sm:text-md text-white">Capgemini Research Institute</p>
+      </div>
+      <p class="text-white text-2xl pt-8">Rewriting today's factories to code tomorrow's cars: A conversation with Dr. Luc Julia</p>
+      <p class="text-white pt-20 ">CAMPGEMINI RESEARCH INSTITUTE</p>
+</div>
+ <div class="flex flex-col items-start justify-start gap-2 relative  ">
+   <img src="./assets/images/Commskit_Women-in-leadership-Research-briefDotCom_Banner_2880X1800.jpeg" alt="" class="h-[35vw] w-[55vw]">
 
 
-        <div class="bg-gray-800  absolute bottom-68 w-[35vw] h-[20vw] top-16 right-14  p-5 pb-4 mb-1 flex flex-col items-start justify-start gap-2">
-          <div class="flex flex-row items-center gap-3">
+        <div class="bg-gray-800  absolute bottom-68 w-[30vw] h-[26vw] top-14 left-[-6vw]  p-5 pb-4 mb-1 flex flex-col items-start justify-start gap-2">
+          <div class="flex flex-row items-center gap-3 pb-4 ">
             <!-- horizontal rule (thin line) placed to the left of the title -->
             <hr class="h-px w-5 bg-white border-none" />
-            <p class="text-lg sm:text-md text-white">Capgemini Research Institute</p>
+            <p class="text-lg sm:text-md text-white ">Capgemini Research Institute</p>
           </div>
-          <p class="text-2xl text-white font-medium">A world in balance 2025</p>
-       <p class="text-white pt-24">CAMPGEMINI RESEARCH INSTITUTE</p>
+          <p class="text-2xl text-white ">Gender and leadership:<br> Navigating bias,<br> opportunity, and change</p>
+       <p class="text-white pt-20 ">CAMPGEMINI RESEARCH INSTITUTE</p>
         </div>
         </div>
       </div>
-      <div  class="flex flex-row justify-between items-start gap-8">
+    <div class="py-12 px-16">
+      <button class="border-2 hover:bg-white hover:text-black border-amber-50 text-white py-4 px-8 rounded-full">More Insights</button>
+    </div>
 
-      </div>
+    <!-- Recent client store -->
+     <div class="">
+<h1 class="text-4xl text-white pt-24 pb-12 px-20">Recent client stories</h1>
+     </div>
   
 </div> <!-- .bg-gray-950 -->  
 <script src="humberger.js">
