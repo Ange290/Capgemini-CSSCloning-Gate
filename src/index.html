@@ -13,36 +13,47 @@
         <img src="../assets/images/capgeminiWhite.svg" alt="" class="h-8 w-auto">
             </div>
           
-      <ul class=" font-medium py-4 hidden md:flex md:flex-row flex-col gap-6 sm:gap-10 items-center" id="menu" aria-hidden="true">
-                <li><a href="#" class="text-white hover:text-gray-400">Insights</a></li>
-                <li><a href="#" class="text-white hover:text-gray-400">Industries</a></li>
-                <li><a href="#" class="text-white hover:text-gray-400">Services</a></li>
-                <li><a href="#" class="text-white hover:text-gray-400">Careers</a></li>
-                <li><a href="#" class="text-white hover:text-gray-400">News</a></li>
-                <li><a href="#" class="text-white hover:text-gray-400">About us</a></li>
-            </ul>
-        
+      <div id="menu" class="font-medium py-4 hidden md:flex md:flex-row flex-col gap-6 sm:gap-10 items-center" aria-hidden="true">
+        <!-- Primary navigation links -->
+        <ul class="flex md:flex-row flex-col gap-6 sm:gap-10 items-center">
+          <li><a href="#" class="text-white hover:text-gray-400">Insights</a></li>
+          <li><a href="#" class="text-white hover:text-gray-400">Industries</a></li>
+          <li><a href="#" class="text-white hover:text-gray-400">Services</a></li>
+          <li><a href="#" class="text-white hover:text-gray-400">Careers</a></li>
+          <li><a href="#" class="text-white hover:text-gray-400">News</a></li>
+          <li><a href="#" class="text-white hover:text-gray-400">About us</a></li>
+    </ul>
 
-          <div class="md:hidden">
-      <button id="menu-btn" type="button" aria-controls="menu" aria-expanded="false" class="text-gray-800 focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16"></path>
+    <!-- Mobile-only additional links: appear in hamburger on small screens only -->
+    <ul class="flex flex-col gap-3 md:hidden mt-2 text-sm">
+      <li><a href="#" class="text-white hover:text-gray-400">Contact us</a></li>
+      <li><a href="#" class="text-white hover:text-gray-400">Investors</a></li>
+      <li><a href="#" class="text-white hover:text-gray-400">Global</a></li>
+      <li><a href="#" class="text-white hover:text-gray-400">Search</a></li>
+      <li><a href="#" class="text-white hover:text-gray-400">Mode</a></li>
+    </ul>
+
+        <div class="md:hidden">
+      <button id="menu-btn" type="button" aria-controls="menu" aria-expanded="false" class="text-white z-50 focus:outline-none">
+        <!-- explicit white stroke to ensure visibility even if Tailwind classes aren't applied -->
+        <svg class="w-6 h-6" fill="none" stroke="#ffffff" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </button>
     </div>
-    <div class="flex-col md:flex-row md:justify-end md:items-center md:gap-6 ml-auto pr-20 font-medium ">
-        <ul class="flex flex-row justify-between items-center gap-4 ">
-            <li><a href="#" class="text-white hover:text-gray-400">Contact us</a></li>
-            <li><a href="#" class="text-white hover:text-gray-400">Investors</a></li>
-            <li><a href="#" class="text-white hover:text-gray-400">Global</a></li>
+      
+  <div class="flex-col md:flex-row md:justify-end md:items-center md:gap-10 ml-auto pr-20 font-medium ">
+    <ul class=" hidden md:flex md:flex-row justify-between items-center gap-4 ">
+      <li><a href="#" class="text-white hover:text-gray-400">Contact us</a></li>
+      <li><a href="#" class="text-white hover:text-gray-400">Investors</a></li>
+      <li><a href="#" class="text-white hover:text-gray-400">Global</a></li>
           
-        </ul>
-        <ul class="flex flex-row justify-between items-right gap-4 ml-6 pt-4">
-            <li><a href="#" class="text-white hover:text-gray-400">Search</a></li>
-            <li><a href="#" class="text-white hover:text-gray-400">Mode</a></li>
-        </ul>
-    </div>
+    </ul>
+    <ul class=" hidden md:flex md:flex-row justify-between items-right gap-4 ml-6 pt-6">
+      <li><a href="#" class="text-white hover:text-gray-400">Search</a></li>
+      <li><a href="#" class="text-white hover:text-gray-400">Mode</a></li>
+    </ul>
+  </div>
     </div>
 </nav>
  <script src="humberger.js"></script>
