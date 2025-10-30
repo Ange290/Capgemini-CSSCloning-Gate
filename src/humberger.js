@@ -7,17 +7,16 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    // initialize aria attributes if not already set
+    // Initialize aria attributes
     if (!btn.hasAttribute('aria-expanded')) btn.setAttribute('aria-expanded', 'false');
     if (!menu.hasAttribute('aria-hidden')) menu.setAttribute('aria-hidden', 'true');
 
     btn.addEventListener('click', () => {
-        // Toggle visibility classes. classList.toggle returns true if the class is now present.
+        // Toggle visibility
         const nowHidden = menu.classList.toggle('hidden');
-        // Ensure 'flex' is present when not hidden (use force param)
         menu.classList.toggle('flex', !nowHidden);
 
-        // Update ARIA attributes to reflect the new state
+        // Update ARIA attributes
         btn.setAttribute('aria-expanded', String(!nowHidden));
         menu.setAttribute('aria-hidden', String(nowHidden));
     });

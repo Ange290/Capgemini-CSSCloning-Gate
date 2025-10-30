@@ -3,59 +3,116 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 <nav> 
-    <div class="container mx-auto h-screen" style="background-image: url('../assets/images/3-e1740988693582.jpeg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
-    <div class="flex justify-start items-center py-4 pl-6 md:pl-4 gap-10 ">
-            <div class="text-white text-lg font-bold ">
-        <img src="../assets/images/capgeminiWhite.svg" alt="" class="h-8 w-auto">
-            </div>
-          
-      <div id="menu" class="font-medium py-4 hidden md:flex md:flex-row flex-col gap-6 sm:gap-10 items-center" aria-hidden="true">
-        <!-- Primary navigation links -->
-        <ul class="flex md:flex-row flex-col gap-6 sm:gap-10 items-center">
+  <div class="relative container mx-auto h-screen">
+    <div class="absolute inset-0 bg-slate-900" style="background-image: url('./assets/images/3-e1740988693582.jpeg');background-size: cover; background-repeat: no-repeat; background-position: center;"></div>
+    <div class="absolute inset-0 bg-black/40"></div>
+    
+    <div class="relative z-10">
+      <!-- Fixed header navigation -->
+      <div class="flex justify-between items-center py-4 px-6 md:px-4 fixed left-0 right-0 top-0 bg-gray-950 hover:bg-gray-950 z-50">
+        
+        <div class="text-white text-lg font-bold">
+          <img src="./assets/images/capgeminiWhite.svg" alt="Capgemini" class="h-8 w-auto">
+        </div>
+        
+        <!-- Desktop primary navigation links -->
+        <ul class="hidden md:flex md:flex-row gap-6 lg:gap-10 items-center font-medium">
           <li><a href="#" class="text-white hover:text-gray-400">Insights</a></li>
           <li><a href="#" class="text-white hover:text-gray-400">Industries</a></li>
           <li><a href="#" class="text-white hover:text-gray-400">Services</a></li>
           <li><a href="#" class="text-white hover:text-gray-400">Careers</a></li>
           <li><a href="#" class="text-white hover:text-gray-400">News</a></li>
           <li><a href="#" class="text-white hover:text-gray-400">About us</a></li>
-    </ul>
-
-    <!-- Mobile-only additional links: appear in hamburger on small screens only -->
-    <ul class="flex flex-col gap-3 md:hidden mt-2 text-sm">
-      <li><a href="#" class="text-white hover:text-gray-400">Contact us</a></li>
-      <li><a href="#" class="text-white hover:text-gray-400">Investors</a></li>
-      <li><a href="#" class="text-white hover:text-gray-400">Global</a></li>
-      <li><a href="#" class="text-white hover:text-gray-400">Search</a></li>
-      <li><a href="#" class="text-white hover:text-gray-400">Mode</a></li>
-    </ul>
-
-        <div class="md:hidden">
-      <button id="menu-btn" type="button" aria-controls="menu" aria-expanded="false" class="text-white z-50 focus:outline-none">
-        <!-- explicit white stroke to ensure visibility even if Tailwind classes aren't applied -->
-        <svg class="w-6 h-6" fill="none" stroke="#ffffff" viewBox="0 0 24 24" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
-    </div>
-      
-  <div class="flex-col md:flex-row md:justify-end md:items-center md:gap-10 ml-auto pr-20 font-medium ">
-    <ul class=" hidden md:flex md:flex-row justify-between items-center gap-4 ">
-      <li><a href="#" class="text-white hover:text-gray-400">Contact us</a></li>
-      <li><a href="#" class="text-white hover:text-gray-400">Investors</a></li>
-      <li><a href="#" class="text-white hover:text-gray-400">Global</a></li>
+        </ul>
+        
+        <!-- Desktop secondary navigation links -->
+        <div class="hidden md:flex lg:flex-col items-center gap-6 lg:gap-4 font-medium">
+          <ul class="flex flex-row gap-6">
+            <li><a href="#" class="text-white hover:text-gray-400">Contact us</a></li>
+            <li><a href="#" class="text-white hover:text-gray-400">Investors</a></li>
+            <li><a href="#" class="text-white hover:text-gray-400">Global</a></li>
+          </ul>
           
-    </ul>
-    <ul class=" hidden md:flex md:flex-row justify-between items-right gap-4 ml-6 pt-6">
-      <li><a href="#" class="text-white hover:text-gray-400">Search</a></li>
-      <li><a href="#" class="text-white hover:text-gray-400">Mode</a></li>
-    </ul>
-  </div>
-    </div>
+          <ul class="flex flex-row gap-4">
+            <li><a href="#" class="text-white hover:text-gray-400">Search</a></li>
+            <li><a href="#" class="text-white hover:text-gray-400">Mode</a></li>
+          </ul>
+        </div>
+        
+        <!-- Hamburger button (visible only on mobile/tablet) -->
+        <button id="menu-btn" type="button" aria-controls="menu" aria-expanded="false" class="md:hidden text-white z-50 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+        
+      </div>
+      
+      <!-- Mobile/Tablet menu (hidden by default) -->
+      <div id="menu" class="hidden md:hidden fixed left-0 right-0 top-[4rem] bg-black/90 px-4 py-6 font-medium z-40 max-h-[calc(100vh-4rem)] overflow-auto" aria-hidden="true">
+        <!-- Primary navigation links -->
+        <ul class="flex flex-col gap-4 mb-6">
+          <li><a href="#" class="text-white hover:text-gray-400 text-lg">Insights</a></li>
+          <li><a href="#" class="text-white hover:text-gray-400 text-lg">Industries</a></li>
+          <li><a href="#" class="text-white hover:text-gray-400 text-lg">Services</a></li>
+          <li><a href="#" class="text-white hover:text-gray-400 text-lg">Careers</a></li>
+          <li><a href="#" class="text-white hover:text-gray-400 text-lg">News</a></li>
+          <li><a href="#" class="text-white hover:text-gray-400 text-lg">About us</a></li>
+        </ul>
+        
+        <div class="border-t border-white/20 my-4"></div>
+        
+        <!-- Secondary navigation links -->
+        <ul class="flex flex-col gap-3 text-sm">
+          <li><a href="#" class="text-white hover:text-gray-400">Contact us</a></li>
+          <li><a href="#" class="text-white hover:text-gray-400">Investors</a></li>
+          <li><a href="#" class="text-white hover:text-gray-400">Global</a></li>
+          <li><a href="#" class="text-white hover:text-gray-400">Search</a></li>
+          <li><a href="#" class="text-white hover:text-gray-400">Mode</a></li>
+        </ul>
+      </div>
+      
+      <!-- Hero content box with proper top spacing -->
+      <div class="pt-32 sm:pt-36 md:pt-40 lg:pt-80 px-4 md:px-6">
+        <div class="bg-blue-900/80 h-64 sm:h-72 w-full sm:w-3/4 md:w-1/2 lg:w-1/3 mx-auto md:mx-20 rounded-md shadow-lg px-6 py-6">
+          <h1 class="text-3xl sm:text-4xl text-white font-bold pt-6 sm:pt-8">Keep AI on the ball</h1>
+          <p class="text-md text-white mt-4">Discover how AI is elevating the fan experience for millions watching the Ryder Cup</p>
+        </div>
+      </div>
+      
+    </div> <!-- .relative z-10 -->
+  </div> <!-- .container -->
 </nav>
- <script src="humberger.js"></script>
+
+<div class="bg-gray-950 h-auto w-full px-20 pb-7">
+  <h1 class="text-4xl text-white py-16 px-4">Highlights</h1>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
+    <div class="flex flex-col items-center gap-4">
+      <img src="./assets/images/lady-with-glasses.png" alt="Highlight Image" class="w-full max-w-sm h-auto rounded-md object-cover">
+      <span class="text-white text-2xl text-center">From Pilot programs to power users</span>
+      <span class="text-white text-center">With AI adoption now mainstream, discover how organizations are scaling their advantage</span>
+    </div>
+
+    <div class="flex flex-col items-center gap-4">
+      <img src="./assets/images/CG-banner_Aiman-Keshav_1000-x-625.jpeg" alt="Highlight Image" class="w-full max-w-sm h-auto rounded-md object-cover">
+      <span class="text-white text-2xl text-center">Capgemini acquires WNS</span>
+      <span class="text-white text-center">Accelerating our vision for Agentic AI-powered Intelligent Operations</span>
+    </div>
+
+    <div class="flex flex-col items-center gap-4">
+      <img src="./assets/images/PR-financial-image (1).jpeg" alt="Highlight Image" class="w-full max-w-sm h-auto rounded-md object-cover">
+      <span class="text-white text-2xl text-center">Q3 2025 performance</span>
+      <span class="text-white text-center">Learn about our Q3 2025 revenues</span>
+    </div>
+  </div>
+</div>
+
+<script src="humberger.js">
+</script>
+
 </body>
 </html>
